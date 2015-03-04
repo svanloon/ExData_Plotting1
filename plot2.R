@@ -19,8 +19,8 @@ dateTime <- strptime(dateTimeCat, format="%d/%m/%Y %H:%M:%S")
 globalActivePower <- as.numeric(householdPowerConsumption$Global_active_power)
 
 # create png, create plot, close device
-# Note: the original file is actually transparent!!!!!
-png("plot2.png", width=480, height=480, units="px",bg = "transparent")
+# bg = "transparent" would make the graph transparent like the original
+png("plot2.png", width=480, height=480, units="px")
 plot(dateTime, globalActivePower, type="l", xlab = "", ylab = "Global Active Power (kilowatts)")
 dev.off()
 ?plot
