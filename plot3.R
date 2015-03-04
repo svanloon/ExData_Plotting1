@@ -19,7 +19,6 @@ submetering2 <- as.numeric(householdPowerConsumption$Sub_metering_2)
 submetering3 <- as.numeric(householdPowerConsumption$Sub_metering_3)
 
 # create png, create plot, close device
-# bg = "transparent" would make the graph transparent like the original
 png("plot3.png", width=480, height=480, units="px")
 par(mfrow=c(1,1))
 plot(dateTime, submetering1, type="l", col="black", ylab="Energy sub metering", xlab="")

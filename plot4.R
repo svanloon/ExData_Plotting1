@@ -12,7 +12,6 @@ householdPowerConsumption <- read.table(file = fileName,
                                         nrows = 2880)
 
 # Open png and set parameters
-# bg = "transparent" would make the graph transparent like the original
 png("plot4.png", width=480, height=480, units="px")
 
 par(mfrow=c(2,2))
@@ -30,12 +29,12 @@ voltage <- as.numeric(householdPowerConsumption$Voltage)
 plot(dateTime, voltage,type="l", ylab="Voltage", xlab="datetime")
 
 # Plot #3 - Submetering
-# data
+# create data
 submetering1 <- as.numeric(householdPowerConsumption$Sub_metering_1)
 submetering2 <- as.numeric(householdPowerConsumption$Sub_metering_2)
 submetering3 <- as.numeric(householdPowerConsumption$Sub_metering_3)
 
-#plot
+# create plot
 plot(dateTime, submetering1, type="l", col="black", ylab="Energy sub metering", xlab="")
 lines(dateTime, submetering2, type="l", col="red")
 lines(dateTime, submetering3, type="l", col="blue")
@@ -50,4 +49,3 @@ globalReactivePower <- as.numeric(householdPowerConsumption$Global_reactive_powe
 plot(dateTime, globalReactivePower, type="l", col="black", ylab="Global_reactive_power", xlab="datetime")
 
 dev.off()
-
