@@ -12,6 +12,7 @@ householdPowerConsumption <- read.table(file = fileName,
                                         nrows = 2880)
 
 # Open png and set parameters
+# bg = "transparent" would make the background transparent, but left off to avoid confusion
 png("plot4.png", width=480, height=480, units="px")
 
 par(mfrow=c(2,2))

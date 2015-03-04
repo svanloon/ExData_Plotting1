@@ -26,6 +26,7 @@ householdPowerConsumption <- read.table(file = fileName,
 globalActivePower <- as.numeric(householdPowerConsumption$Global_active_power)
 
 # Open png device, create plot, and close device
+# bg = "transparent" would make the background transparent, but left off to avoid confusion
 png("plot1.png", width=480, height=480, units="px") 
 hist(globalActivePower, col="red", xlab="Global Active Power (kilowatts)", main="Global Active Power")
 dev.off()
