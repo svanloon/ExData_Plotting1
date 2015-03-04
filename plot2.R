@@ -1,4 +1,4 @@
-# Load the filtered data
+# Load and filter the data
 fileName = "household_power_consumption.txt"
 names <- read.table(file = fileName,
                     sep = ";",
